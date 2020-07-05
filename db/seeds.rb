@@ -10603,14 +10603,24 @@ array =
 
 
 array.each do |obj|
-    # byebug
-    Beer.find_or_create_by(
+  Beer.find_or_create_by(
         name: obj[:name],
         tagline: obj[:tagline],
         description: obj[:description],
         image_url: obj[:image_url],
         abv: obj[:abv],
+        ibu: obj[:ibu],
         food_pairing: obj[:food_pairing],
         brewers_tips: obj[:brewers_tips],
+        price: rand(1..20).to_f,
+        quantity: rand(1..50),
+        country: Faker::Address.country,
+        style: Faker::Beer.style,
     )
 end
+
+# delete! '"[\]'
+
+# https://stackoverflow.com/questions/19637677/how-to-delete-specific-characters-from-a-string-in-ruby
+
+"[\"Spicy chicken tikka masala\", \"Grilled chicken quesadilla\", \"Caramel toffee cake\"]"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_03_100733) do
+ActiveRecord::Schema.define(version: 2020_07_03_190502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,14 @@ ActiveRecord::Schema.define(version: 2020_07_03_100733) do
     t.string "tagline"
     t.string "description"
     t.string "image_url"
-    t.string "abv"
+    t.integer "abv"
+    t.integer "ibu"
     t.string "food_pairing"
     t.string "brewers_tips"
+    t.float "price"
+    t.integer "quantity"
+    t.string "country"
+    t.string "style"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
