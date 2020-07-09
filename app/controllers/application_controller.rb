@@ -1,9 +1,5 @@
 class ApplicationController < ActionController::API
     before_action :authorized
-   
-    # def getToken
-    #   @token = encode_token({ user_id: @user.id })
-    # end
 
     def encode_token(payload)
       # should store secret in env variable
