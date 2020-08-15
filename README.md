@@ -1,7 +1,4 @@
-# README
-
-
-Things you may want to cover:
+README:
 
 * Ruby version
 
